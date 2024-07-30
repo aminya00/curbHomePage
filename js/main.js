@@ -2,8 +2,8 @@ let newArrivalContainer = $.querySelector(".new-arrival-container");
 let trendingNowContainer = $.querySelector(".trending-now-container");
 let newCollectionContainer = $.querySelector(".new-collection-container");
 let mostPopularContainer = $.querySelector(".most-popular-container");
-let showAllProductBtn = $.querySelector(".show-all-product-btn");
-let showBannerProductBtn = $.querySelector(".show-banner-product-btn");
+let showAllProductBtnArr = $.querySelectorAll(".show-all-product-btn");
+let showBannerProductBtnArr = $.querySelectorAll(".show-banner-product-btn");
 let mainBoxesBtnArr = $.querySelectorAll(".main-boxes-btn");
 let productContainerArr = $.querySelectorAll(".product-container");
 let menCategory = $.querySelector(".men-category");
@@ -142,13 +142,16 @@ fetch(
     isProductInWishlist(productNameArray);
     preLoaderDisappear()  
   });
-
-showAllProductBtn.addEventListener("click", (e) => {
-  switchToProductPage("collection", "all product", "همه محصولات");
-});
-showBannerProductBtn.addEventListener("click", (e) => {
-  switchToProductPage("collection", "chvrsi", "CURB X CHVRSI");
-});
+  showAllProductBtnArr.forEach((showAllProductBtn)=>{
+    showAllProductBtn.addEventListener("click", (e) => {
+      switchToProductPage("collection", "all product", "همه محصولات");
+    });
+  })
+  showBannerProductBtnArr.forEach((showBannerProductBtn)=>{
+    showBannerProductBtn.addEventListener("click", (e) => {
+      switchToProductPage("collection", "chvrsi", "CURB X CHVRSI");
+    });
+  })
 mainBoxesBtnArr.forEach((mainBoxesBtn) => {
   mainBoxesBtn.addEventListener("click", (e) => {
     if((mainBoxesBtn.previousElementSibling.innerHTML.trim()).toLowerCase()=="new arrival"){
