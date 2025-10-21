@@ -10,16 +10,17 @@ body {
   width: fit-content;
   border-radius: 24px;
   background-color: var(--main-black);
-  border: 1px solid var(--main-green);
-  box-shadow: 0 1px 5px var(--main-green);
+  box-shadow: 0 1px 7px rgb(72, 247, 13, 0.7);
   cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .product-img-container {
   margin-bottom: 12px;
   width: 250px;
   height: 250px;
-  position:relative;
+  position: relative;
 }
 .product-img-container img {
   overflow: hidden;
@@ -116,7 +117,7 @@ body {
   font-size: var(--title-font-size);
   font-weight: bold;
   margin-bottom: 5px;
-  text-shadow: 1px 2px var(--main-green);
+  text-shadow: 0 0 6px rgb(72, 247, 13);
   color: var(--main-white);
 }
 .main-boxes-items {
@@ -126,7 +127,7 @@ body {
 .products-page-wrapper {
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 .main-boxes-title-en {
@@ -149,8 +150,8 @@ body {
   border-radius: 12px;
   font-weight: 600;
 }
-.hover-for-btn:hover{
-  background-color:rgb(64, 221, 12);
+.hover-for-btn:hover {
+  background-color: rgb(64, 221, 12);
   transition: all 0.3s;
 }
 /* /////////// gender category ////////// */
@@ -191,7 +192,7 @@ body {
   color: var(--main-white);
 }
 /* /////////// banner 1 ///////// */
-.banner-1-container{
+.banner-1-container {
   height: 521px;
 }
 .banner-1 {
@@ -208,7 +209,7 @@ body {
   height: 715px;
 }
 .banner-1-text {
-  width:fit-content;
+  width: fit-content;
   height: 100%;
   display: flex;
   flex-direction: column;
